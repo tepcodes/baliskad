@@ -1,9 +1,21 @@
+let lastResults = [];
+let resultAdded = false;
+
 function mirror() {
     let inputText = document.getElementById('userInput').value;
     if (/^[a-zA-Z\s]+$/.test(inputText.trim())) {
         addToResults(mirroredText(inputText));
+        resultAdded = true;
+        clearTextArea();
     } else {
         alert('Use only alphabet letters.')
+    };
+    
+}
+
+function clearTextArea () {
+    if (addToResults === true) {
+        document.getElementById('userInput').value = '';
     }
 }
 
@@ -18,6 +30,8 @@ function reverse() {
     let inputText = document.getElementById('userInput').value;
     if (/^[a-zA-Z\s]+$/.test(inputText.trim())) {
         addToResults(reversedText(inputText));
+        resultAdded = true;
+        clearTextArea();
     } else {
         alert('Use only alphabet letters.')
     }
@@ -30,7 +44,7 @@ function reversedText(input) {
     return reversedText;
 }
 
-let lastResults = [];
+
 
 function addToResults(result) {
     lastResults.unshift(result);
@@ -40,4 +54,11 @@ function addToResults(result) {
 
 function displayOutput(output) {
     document.getElementById('output').innerHTML = lastResults.join('<br>');
+}
+
+function clearTextArea () {
+    if (resultAdded) {
+        document.getElementById('userInput').value = '';
+        resultAdded = false;
+    }
 }
