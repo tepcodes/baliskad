@@ -1,0 +1,116 @@
+* {
+    background-color: #101010;
+    color: ivory;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* border: red solid 1px; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 5px 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.hero {
+    font-size: larger;
+    font-weight: 600;
+}
+
+.content {
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+    width: 100%;
+}
+
+span {
+    font-style: italic;
+    font-family: cursive;
+    color: lightgoldenrodyellow;
+}
+
+textarea {
+    height: 60px;
+    width: 80%;
+    border: ivory dotted 1px;
+    text-wrap: wrap;
+    white-space: normal;
+    font-size: 15px;
+    color: lightgray;
+    text-align: center;
+}
+
+textarea:focus {
+    outline: none;
+    border: ivory dotted 1px;
+}
+
+.buttons {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    height: 30px;
+    width: 30%;
+    font-size: inherit;
+    border: ivory solid 1px;
+    border-radius: 15px;
+}
+
+#output {
+    height: 100px;
+    width: 100%;
+    font-style: italic;
+    color: ivory;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0; 
+    z-index: 100;
+    width: 100%;
+    font-size: small;
+    padding-bottom: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
