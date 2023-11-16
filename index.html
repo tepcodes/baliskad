@@ -13,15 +13,23 @@
     </header>
     <main>
         <section class="hero">
-            <p>Have fun <span>baliskading</span> your text!</p>
+            <p>Have fun <span>baliskad-ing</span> your text!</p>
         </section>
         <section class="content">
-            <textarea type="text" maxlength="300" placeholder="Enter a text here." id="userInput"></textarea>
-            <div class="buttons">
-                <button onclick="reverse()">Reverse it!</button>
-                <button onclick="mirror()">Mirror it!</button>
-            </div>
-            <div id="output">
+            <textarea maxlength="300" placeholder="Enter a text here." id="userInput"></textarea>
+            <div id="results">
+                <div class="reverse">
+                    <button onclick="reverse()">Reverse it!</button>
+                    <div id="reverseOutput" class="output"></div>
+                </div>
+                <div class="mirror">
+                    <button onclick="mirror()">Mirror it!</button>
+                    <div id="mirrorOutput" class="output"></div>
+                </div>
+                <div class="reflect">
+                    <button onclick="reflect()">Reflect it!</button>
+                    <div id="reflectOutput" class="output"></div>
+                </div>
             </div>
         </section>
     </main>
