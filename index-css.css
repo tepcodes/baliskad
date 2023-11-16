@@ -11,7 +11,7 @@ body {
     font-size: 20px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 header{
@@ -107,10 +107,88 @@ footer {
     width: 100%;
     font-size: small;
     padding-bottom: 10px;
-
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+@media only screen and (max-width: 600px) {
+    * {
+        background-color: #101010;
+        color: ivory;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    body {
+        font-size: 20px;
+        text-align: center;
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+    
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 5px;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .hero {
+        font-size: larger;
+        font-weight: 600;
+    }
+    
+    textarea {
+        height: 60px;
+        width: 100%;
+        border: ivory dotted 1px;
+        font-size: 15px;
+        color: lightgray;
+        text-align: center;
+        resize: none; /* Disable resizing of the textarea */
+    }
+    
+    textarea:focus {
+        outline: none;
+        border: ivory dotted 1px;
+    }
+    
+    .buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 15px;
+    }
+    
+    button {
+        height: 30px;
+        font-size: inherit;
+        border: ivory solid 1px;
+        border-radius: 15px;
+        width: 100%; /* Make buttons full width on small screens */
+    }
+    
+    #output {
+        height: 100px;
+        font-style: italic;
+        color: ivory;
+        text-align: center;
+    }
+    
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        font-size: small;
+        padding: 10px;
+    }
 }
